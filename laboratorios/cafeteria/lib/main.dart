@@ -27,11 +27,47 @@ class MyApp extends StatelessWidget {
              Row(
                 
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: [Text('Marcador Deportivo', style: TextStyle(fontSize: 20)),
+                children: [Text('Mi pedido', style: TextStyle(fontSize: 20)),
                 ],
              ),
-             ]
-          )
+             Center(
+                child: SizedBox(
+                  width: 50.0,
+                  height: 50.0,
+                 
+                ),
+              ),
+                Row(
+                children: [
+                  productoPedido(
+                    'Café',
+                    precio: 10,
+                    cantidad: 0.bitLength
+    
+                  ),
+                ]
+                ),
+                Row(
+                children: [
+                  productoPedido(
+                    'Sándwich',
+                    precio: 25,
+                    cantidad: 0 
+                  ),
+                ]
+                ),
+                Row(
+                children: [
+                  productoPedido(
+                    'Jugo',
+                    precio: 12,
+                    cantidad: 0 
+                  ),
+                ]
+                )
+             ],
+            
+          ),
           ),
       ),
      
@@ -55,7 +91,28 @@ Widget productoPedido(
         padding: const EdgeInsets.all(14),
          child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          
+           children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    nombre,
+                    style: const TextStyle(
+                      fontSize: 19,
+                    ),
+                  ),
+                  Text(
+                    'Q${precio.toString()}',
+                    style: const TextStyle(
+                      fontSize: 19,
+                    ),
+                  ),
+                  
+                ],
+              ),
+            ]
+
+           
          )
       ),  
   );
