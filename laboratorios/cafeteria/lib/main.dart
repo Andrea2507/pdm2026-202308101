@@ -42,7 +42,12 @@ class MyApp extends StatelessWidget {
                   productoPedido(
                     'Café',
                     precio: 10,
-                    cantidad: 0.bitLength
+                    cantidad: 0.bitLength,
+                    aumentar: () {
+                      setState(() {
+                        puntosEquipo1++;
+                      });
+                    },
     
                   ),
                 ]
@@ -107,6 +112,12 @@ Widget productoPedido(
                       fontSize: 19,
                     ),
                   ),
+                   Expanded(
+                  child: ElevatedButton(
+                    onPressed: aumentar,
+                    child: const Text('+1'),
+                  ),
+                ),
                   
                 ],
               ),
