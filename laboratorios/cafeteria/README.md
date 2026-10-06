@@ -1,17 +1,11 @@
-# cafeteria
 
-A new Flutter project.
 
-## Getting Started
+## ¿Cómo calcula el total y por qué conviene reutilizar ProductoPedido?
 
-This project is a starting point for a Flutter application.
+Multiplicando el precio de cada producto por su cantidad y después sumando los tres resultados, cuando se presiona un botón, cambio la cantidad con setState y la pantalla se actualiza con el nuevo total. Uso toStringAsFixed(2) para mostrar siempre dos decimales 
 
-A few resources to get you started if this is your first Flutter project:
+Reutilizar productoPedido me sirve para no escribir lo mismo tres veces, le paso el nombre, precio, cantidad y las acciones de los botones. Así los tres productos tienen el mismo diseño y, si quiero cambiar cómo se ven, solo modifico esa función.
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+## Pedido de Q57.00
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![alt text](image.png)
